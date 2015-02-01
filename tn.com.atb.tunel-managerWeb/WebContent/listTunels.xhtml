@@ -7,40 +7,22 @@
 
 <h:head></h:head>
 <body>
-	<h:dataTable value="#{tunelBean.tunels}" var="t" border="2">
-		<h:column id="column1">
-			<f:facet name="header">
-				<h:outputText value="#" />
-			</f:facet>
-			<h:outputText value="#{t.id}" />
-		</h:column>
-		<h:column id="column2">
-			<f:facet name="header">
-				<h:outputText value="state" />
-			</f:facet>
-			<h:outputText value="#{t.state}" />
-		</h:column>
-		<h:column id="column3">
-			<f:facet name="header">
-				<h:outputText value="router" />
-			</f:facet>
-			<h:outputText value="#{t.router.serialNumber}" />
-		</h:column>
-		<h:column id="column4">
-			<f:facet name="header">
-				<h:outputText value="agency" />
-			</f:facet>
-			<h:outputText value="#{t.agency.name}" />
-		</h:column>
 
 
-
-	</h:dataTable>
-
-	<p:dataTable value="#{tunelBean.tunels}" var="t" filteredValue="#{t.id}">
-		<p:column headerText="Id" filterBy="#{t.id}">
+	<p:dataTable var="t" value="#{tunelBean.tunels}">
+		<p:column headerText="#">
 			<h:outputText value="#{t.id}" />
 		</p:column>
+		<p:column headerText="state">
+			<h:outputText value="#{t.state}" />
+		</p:column>
+		<p:column headerText="router">
+			<h:outputText value="#{t.router.serialNumber}" />
+		</p:column>
+		<p:column headerText="agancy">
+			<h:outputText value="#{t.agency.name}" />
+		</p:column>
+
 
 	</p:dataTable>
 
