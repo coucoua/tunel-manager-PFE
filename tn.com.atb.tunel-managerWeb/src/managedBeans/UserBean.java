@@ -20,7 +20,7 @@ public class UserBean {
 		try {
 			user = userServicesLocal.login(user.getLogin(), user.getPassword());
 			if (user instanceof Admin) {
-				return "/adminHome?faces-redirect=true";
+				return "/listTunels?faces-redirect=true";
 			} else if (user instanceof HelpDesk) {
 				System.out.println("helpDesk");
 			}
