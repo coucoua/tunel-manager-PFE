@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="tn.com.atb.tunel-manager">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="tn.com.atb.tunel-managerEJB.jar" deploy-path="/" handle="module:/resource/tn.com.atb.tunel-managerEJB/tn.com.atb.tunel-managerEJB">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="tn.com.atb.tunel-managerWeb.war" deploy-path="/" handle="module:/resource/tn.com.atb.tunel-managerWeb/tn.com.atb.tunel-managerWeb">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
