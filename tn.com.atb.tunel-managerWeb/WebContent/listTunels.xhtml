@@ -7,24 +7,61 @@
 
 <h:head></h:head>
 <body>
-
-
-	<p:dataTable var="t" value="#{tunelBean.tunels}">
-		<p:column headerText="#">
+	<h:dataTable value="#{tunelBean.tunels}" var="t" border="2">
+		<h:column id="column1">
+			<f:facet name="header">
+				<h:outputText value="#" />
+			</f:facet>
 			<h:outputText value="#{t.id}" />
-		</p:column>
-		<p:column headerText="state">
+		</h:column>
+		<h:column id="column2">
+			<f:facet name="header">
+				<h:outputText value="state" />
+			</f:facet>
 			<h:outputText value="#{t.state}" />
-		</p:column>
-		<p:column headerText="router">
+		</h:column>
+		<h:column id="column3">
+			<f:facet name="header">
+				<h:outputText value="router" />
+			</f:facet>
 			<h:outputText value="#{t.router.serialNumber}" />
-		</p:column>
-		<p:column headerText="agancy">
+		</h:column>
+		<h:column id="column4">
+			<f:facet name="header">
+				<h:outputText value="agency" />
+			</f:facet>
 			<h:outputText value="#{t.agency.name}" />
-		</p:column>
+		</h:column>
 
 
-	</p:dataTable>
 
+	</h:dataTable>
+	<h:form>
+		<p:dataTable var="data" value="#{userBean.users}"
+			emptyMessage="No user found with given criteria"
+			filteredValue="#{userBean.filtredUsers}" editable="true">
+			<p:ajax event="rowEdit" listener="#{userBean.onRowEdit}" />
+			<f:facet name="header">  
+            In-Cell Editing  
+        </f:facet>
+			<p:column headerText="name" filterBy="#{data.name}"
+				filterMatchMode="exact">
+				<h:outputText value="#{data.name}" />
+			</p:column>
+			<p:column>
+				<p:cellEditor>
+					<f:facet name="output">
+						<h:outputText value="#{data.login}" />
+					</f:facet>
+					<f:facet name="input">
+						<p:inputText value="#{data.login}" style="width:100%" />
+					</f:facet>
+				</p:cellEditor>
+			</p:column>
+			<p:column headerText="Options">
+				<p:rowEditor />
+			</p:column>
+		</p:dataTable>
+	</h:form>
 </body>
 </html>

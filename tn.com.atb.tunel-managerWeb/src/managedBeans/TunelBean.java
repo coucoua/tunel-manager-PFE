@@ -14,7 +14,7 @@ import domain.Tunel;
 @ViewScoped
 public class TunelBean {
 	private List<Tunel> tunels = new ArrayList<>();
-	private List<Tunel> filtredTunels=new ArrayList<>();
+	private List<Tunel> filtredTunels = new ArrayList<>();
 	@EJB
 	private TunelServicesLocal tunelServicesLocal;
 
