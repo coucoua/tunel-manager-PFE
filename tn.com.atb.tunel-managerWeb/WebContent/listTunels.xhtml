@@ -36,13 +36,33 @@
 
 
 	</h:dataTable>
-
-	<p:dataTable value="#{tunelBean.tunels}" var="t" filteredValue="#{t.id}">
-		<p:column headerText="Id" filterBy="#{t.id}">
-			<h:outputText value="#{t.id}" />
-		</p:column>
-
-	</p:dataTable>
-
+	<h:form>
+		<p:dataTable var="data" value="#{userBean.users}"
+			emptyMessage="No user found with given criteria"
+			filteredValue="#{userBean.filtredUsers}" editable="true">
+			<p:ajax event="rowEdit" listener="#{userBean.onRowEdit}"
+				 />
+			<f:facet name="header">  
+            In-Cell Editing  
+        </f:facet>
+			<p:column headerText="name" filterBy="#{data.name}"
+				filterMatchMode="exact">
+				<h:outputText value="#{data.name}" />
+			</p:column>
+			<p:column>
+				<p:cellEditor>
+					<f:facet name="output">
+						<h:outputText value="#{data.login}" />
+					</f:facet>
+					<f:facet name="input">
+						<p:inputText value="#{data.login}" style="width:100%" />
+					</f:facet>
+				</p:cellEditor>
+			</p:column>
+			<p:column headerText="Options">
+				<p:rowEditor />
+			</p:column>
+		</p:dataTable>
+	</h:form>
 </body>
 </html>
