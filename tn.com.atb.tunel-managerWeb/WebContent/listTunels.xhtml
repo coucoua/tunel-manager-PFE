@@ -40,8 +40,7 @@
 		<p:dataTable var="data" value="#{userBean.users}"
 			emptyMessage="No user found with given criteria"
 			filteredValue="#{userBean.filtredUsers}" editable="true">
-			<p:ajax event="rowEdit" listener="#{userBean.onRowEdit}"
-				 />
+			<p:ajax event="rowEdit" listener="#{userBean.onRowEdit}" />
 			<f:facet name="header">  
             In-Cell Editing  
         </f:facet>
