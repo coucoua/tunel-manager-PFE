@@ -8,13 +8,14 @@ import javax.persistence.PersistenceContext;
 
 import services.managmentServices.interfaces.TunelServicesLocal;
 import services.managmentServices.interfaces.TunelServicesRemote;
+
 import domain.Tunel;
 
 /**
  * Session Bean implementation class TunelServices
  */
 @Stateless
-public class TunelServices implements TunelServicesRemote, TunelServicesLocal {
+public abstract class TunelServices implements TunelServicesRemote, TunelServicesLocal {
 
 	@PersistenceContext
 	private EntityManager entityManager;
@@ -32,5 +33,16 @@ public class TunelServices implements TunelServicesRemote, TunelServicesLocal {
 		return entityManager.createQuery("select t from Tunel t", Tunel.class)
 				.getResultList();
 	}
+
+	//@Override
+	// public Boolean addTunnel(Tunel tunnel) {
+		//Boolean b = false;
+		//try {
+			//entityManager.persist(tunnel);
+			//b = true;
+		//} catch (Exception e) {
+		//}
+		//return b;
+	//}
 
 }

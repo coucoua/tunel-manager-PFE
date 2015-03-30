@@ -18,7 +18,7 @@ public class TestAddUser {
 				.lookup(jndiName);
 
 		Admin admin = new Admin("meher", "a", "a", "azerty");
-		HelpDesk helpDesk = new HelpDesk("ahlem", "b", "b", "info");
+		HelpDesk helpDesk = new HelpDesk("karam", "b", "b", "info");
 
 		proxy.addUser(admin);
 		proxy.addUser(helpDesk);

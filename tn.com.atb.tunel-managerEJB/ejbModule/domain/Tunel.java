@@ -14,7 +14,9 @@ import javax.persistence.ManyToOne;
 public class Tunel implements Serializable {
 
 	private Integer id;
+
 	private Boolean state;
+	
 	private static final long serialVersionUID = 1L;
 
 	private Router router;
@@ -22,6 +24,18 @@ public class Tunel implements Serializable {
 
 	public Tunel() {
 		super();
+	}
+
+	
+
+	public Tunel(Integer id, Integer ifIndex, Boolean state, Router router,
+			Agency agency) {
+		super();
+		this.id = id;
+	
+		this.state = state;
+		this.router = router;
+		this.agency = agency;
 	}
 
 	@Id
@@ -58,5 +72,7 @@ public class Tunel implements Serializable {
 	public void setAgency(Agency agency) {
 		this.agency = agency;
 	}
+
+	
 
 }

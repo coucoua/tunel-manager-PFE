@@ -1,5 +1,7 @@
 package services.managmentServices.impl;
 
+import java.util.List;
+
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -48,6 +50,18 @@ public class UserServices implements UserServicesRemote, UserServicesLocal {
 		} catch (Exception e) {
 		}
 		return user;
+	}
+
+	@Override
+	public List<User> findAllUsers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean updateUser(User user) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

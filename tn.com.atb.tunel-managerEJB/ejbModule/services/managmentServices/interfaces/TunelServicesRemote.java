@@ -9,5 +9,6 @@ import domain.Tunel;
 @Remote
 public interface TunelServicesRemote {
 	List<Tunel> findAllTunels();
+	
 
 }

@@ -8,5 +8,7 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/tn.com.atb.tunel-manager-client"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/tn.com.atb.tunel-managerWeb"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -14,7 +14,7 @@ public class TestFindAllTunels {
 	public static void main(String[] args) throws NamingException {
 		Context context = new InitialContext();
 		TunelServicesRemote proxy = (TunelServicesRemote) context
-				.lookup("ejb:tn.com.atb.tunel-manager/tn.com.atb.tunel-managerEJB/TunelServices!services.managmentServices.interfaces.TunelServicesRemote");
+				.lookup("ejb:tn.com.atb.tunel-manager/tn.com.atb.tunel-managerEJB/TunelServices!");
 		List<Tunel> tunels = proxy.findAllTunels();
 
 		System.out.println(tunels.size());

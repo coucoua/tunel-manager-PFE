@@ -18,6 +18,8 @@ public class Agency implements Serializable {
 	
 	private Integer id;
 	private String name;
+	
+	
 	private static final long serialVersionUID = 1L;
 	
 	private List<Tunel> tunels;
@@ -47,5 +49,6 @@ public class Agency implements Serializable {
 	public void setTunels(List<Tunel> tunels) {
 		this.tunels = tunels;
 	}
+
    
 }

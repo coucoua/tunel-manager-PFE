@@ -5,11 +5,11 @@
 	<persistence-unit name="tn.com.atb.tunel-managerEJB">
 		<jta-data-source>java:/tunelDS</jta-data-source>
 		<class>domain.Admin</class>
+		<class>domain.Agency</class>
 		<class>domain.HelpDesk</class>
 		<class>domain.Router</class>
-		<class>domain.User</class>
 		<class>domain.Tunel</class>
-		<class>domain.Agency</class>
+		<class>domain.User</class>
 		<properties>
 			<property name="hibernate.hbm2ddl.auto" value="create" />
 		</properties>

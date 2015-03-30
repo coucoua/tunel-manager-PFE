@@ -9,4 +9,5 @@ import domain.Tunel;
 @Local
 public interface TunelServicesLocal {
 	List<Tunel> findAllTunels();
+	
 }

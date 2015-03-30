@@ -14,7 +14,8 @@ import javax.persistence.OneToMany;
 @Entity
 public class Router implements Serializable {
 
-	private Integer serialNumber;
+	private Integer serialNumber;//if index
+	
 	private static final long serialVersionUID = 1L;
 
 	private List<Tunel> tunels;
